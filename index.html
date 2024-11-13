@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>43 to 52</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- chapter 43 to 48 -->
+
+    <!-- ans 1 -->
+    <a href="#" onclick="Alert()">Click me!</a>
+
+    <!-- ans 2 -->
+    <h2>Click on the mobile images to see an alert</h2>
+    <img src="samsung.webp" alt="Mobile 1" width="200" onclick="showAlert('samsung clicked!')">
+    <img src="vivo.jpg" alt="Mobile 2" width="200" onclick="showAlert('vivo clicked!')">
+    <img src="infinix.webp" alt="Mobile 3" width="200" onclick="showAlert('infinix clicked!')">
+
+    <!-- ans 3 -->
+    <h2>Student Records</h2>
+    <table border="1" id="studentTable">
+        <thead>
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td>John</td>
+                <td>9</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Doe</td>
+                <td>10</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Mark</td>
+                <td>8</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>James</td>
+                <td>9</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ans 4 -->
+    <h2>Hover over the image to change it</h2>
+    <img src="hover.jfif" id="myImage" alt="Image" width="300" height="200" onmouseover="changeImage()"
+        onmouseout="resetImage()">
+
+    <!-- ans 5 -->
+    <h2>Counter Example</h2>
+    <p id="counterValue">0</p>
+    <button onclick="increaseCounter()">Increase</button>
+    <button onclick="decreaseCounter()">Decrease</button>
+
+    <!-- chapters 49 to 52 -->
+    <!-- ans 1 -->
+    <h2>Signup Form</h2>
+    <form id="signupForm" onsubmit="displayData(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="formData">
+        <h3>Form Data:</h3>
+        <p id="displayName"></p>
+        <p id="displayEmail"></p>
+        <p id="displayPassword"></p>
+    </div>
+
+    <!-- ans 2 -->
+    <h2>Item Details</h2>
+    <div class="item">
+        <h3>Item 1</h3>
+        <p class="content" id="item1Content">
+            This is the short description of the item. This is all the user will see initially.
+            <span id="fullContent" style="display:none;">
+                But when they click on "Read More", they will see the full detail of the item, which includes additional
+                information about the features, pricing, and specifications.
+                This extra content is hidden by default and will only be visible when the user interacts with the page.
+            </span>
+        </p>
+        <span class="read-more" id="readMoreBtn" onclick="toggleContent()">Read More</span>
+    </div>
+
+    <!-- ans 3 -->
+    <h2>Student Records</h2>
+    <h2>
+        In this form, there’s overlapping with the previous form. Please commit the upper form first, and then fill out
+        this one.</h2>
+    <form id="studentForm" onsubmit="addStudent(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" required><br><br>
+        <label for="grade">Grade:</label>
+        <input type="text" id="grade" required><br><br>
+        <button type="submit">Add Student</button>
+    </form>
+
+    <div id="editForm">
+        <h3>Edit Student Details</h3>
+        <label for="editName">Name:</label>
+        <input type="text" id="editName" required><br><br>
+        <label for="editAge">Age:</label>
+        <input type="number" id="editAge" required><br><br>
+        <label for="editGrade">Grade:</label>
+        <input type="text" id="editGrade" required><br><br>
+        <button onclick="updateStudent()">Update Student</button>
+        <button onclick="cancelEdit()">Cancel</button>
+    </div>
+
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+
+</html>
